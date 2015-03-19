@@ -18,7 +18,7 @@
     android:title="@string/temasek_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!-- App circle bar -->
+    <!-- App bar -->
     <PreferenceScreen
          android:key="app_circle_bar"
          android:fragment="com.android.settings.temasek.AppCircleBar"
@@ -48,7 +48,7 @@
          android:fragment="com.android.settings.temasek.gestureanywhere.GestureAnywhereSettings"
          android:title="@string/gesture_anywhere_title" />
 
-    <!-- Lockscreen shortcuts -->
+    <!-- Lock screen shortcuts -->
     <PreferenceScreen
          android:key="lockscreen_temasek"
          android:fragment="com.android.settings.temasek.LockScreenSettings"
@@ -71,5 +71,11 @@
          android:id="@+id/smartcontrol_settings"
          android:title="@string/smartcontrol_settings_title"
          android:fragment="com.android.settings.temasek.SmartControl" />
-
+         
+    <!-- Wakelock blocker -->
+    <PreferenceScreen
+         android:key="wakelock_blocker"
+         android:fragment="com.android.settings.temasek.WakeLockBlocker"
+         android:title="@string/wakelock_blocker_title" />
+ 
 </PreferenceScreen>

@@ -168,17 +168,6 @@
                 android:icon="@drawable/ic_settings_buttons"
                 />
 
-        <!-- Viper4Android -->
-        <dashboard-tile
-            android:id="@+id/viper_settings"
-            android:icon="@drawable/ic_settings_viper"
-            android:title="@string/viper_title">
-            <intent
-                android:action="android.intent.action.MAIN"
-                android:targetPackage="com.vipercn.viper4android_v2"
-                android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android" />
-        </dashboard-tile>
-
         <!-- O-Click -->
         <dashboard-tile
                 android:id="@+id/oclick"
@@ -246,6 +235,28 @@
                 android:fragment="com.android.settings.cyanogenmod.StatusBarSettings"
                 android:icon="@drawable/ic_settings_extdesk_hidenavbar"
                 />
+                
+        <!-- AudioFX -->
+        <dashboard-tile
+            android:id="@+id/audiofx_settings"
+            android:icon="@drawable/ic_settings_sound"
+            android:title="@string/audiofx_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="org.cyanogenmod.audiofx"
+                android:targetClass="org.cyanogenmod.audiofx.ActivityMusic" />
+        </dashboard-tile>
+        
+        <!-- Viper4Android -->
+        <dashboard-tile
+            android:id="@+id/viper_settings"
+            android:icon="@drawable/ic_settings_viper"
+            android:title="@string/viper_title">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetPackage="com.vipercn.viper4android_v2"
+                android:targetClass="com.vipercn.viper4android_v2.activity.ViPER4Android" />
+        </dashboard-tile>
 
         <!-- Notification drawer -->
         <dashboard-tile
@@ -253,15 +264,6 @@
                 android:title="@string/notification_drawer_title"
                 android:fragment="com.android.settings.cyanogenmod.NotificationDrawerSettings"
                 android:icon="@drawable/ic_settings_notification_drawer"
-                settings:advanced="true"
-                />
-
-        <!-- Temasek spare parts -->
-        <dashboard-tile
-                android:id="@+id/temasek_settings"
-                android:title="@string/temasek_settings_title"
-                android:fragment="com.android.settings.temasek.TemasekSettings"
-                android:icon="@drawable/ic_settings_system"
                 settings:advanced="true"
                 />
 
@@ -305,6 +307,15 @@
                 android:fragment="com.android.settings.location.LocationSettings"
                 android:icon="@drawable/ic_settings_location"
                 />
+                
+        <!-- Advanced settings -->
+        <dashboard-tile
+                android:id="@+id/temasek_settings"
+                android:title="@string/temasek_settings_title"
+                android:fragment="com.android.settings.temasek.TemasekSettings"
+                android:icon="@drawable/ic_sysbar_quicksettings"
+                settings:advanced="true"
+                />        
 
     </dashboard-category>
 

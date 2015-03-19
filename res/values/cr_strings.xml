@@ -2,13 +2,12 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- About phone screen, Temasek version -->
-    <string name="temasek_version_title">Temasek unofficial version</string>
-    <!-- Do NOT translate this -->
-    <string name="temasek_version_default" translatable="false">Build V9.4</string>
+    <!-- Android Adam version -->  
+    <string name="aosp_adamTitle">Android base</string>
+    <string name="aosp_adam">Lollipop 5.0.2 Rev 1 LRX22G</string>
 
     <!-- temasek spare parts -->
-    <string name="temasek_settings_title">Temasek spare parts</string>
+    <string name="temasek_settings_title">Advanced settings</string>
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_style_title">Style</string>
     <string name="status_bar_settings">Status bar settings</string>
@@ -133,9 +132,9 @@
     <string name="disable_immersive_message_title">Disable Immersive Mode Messages</string>
     <string name="disable_immersive_message_summary">This will hide all Immersive Mode Messages</string>
 
-    <!-- Temasek Extra Info -->
-    <string name="temaextrainfo">Extra information</string>
-    <string name="temaextrainfo_summary">Display extra info for cpu, display, etc</string>
+    <!-- Hardware Info -->
+    <string name="temaextrainfo">Advanced hardware information</string>
+    <string name="temaextrainfo_summary">Display more detailed device info</string>
 
     <!-- Per app controls for LP keyguard notifications -->
     <string name="app_notification_show_on_keyguard_title">Show on lockscreen</string>
@@ -274,16 +273,17 @@
     <string name="smart_pulldown_all">No dismissable or persistent</string>
 
     <!-- Restart SystemUI -->
-    <string name="restart_systemui">Restart SystemUI</string>
+    <string name="restart_systemui">Restart systemUI</string>
 
     <!--Power menu -->
     <string name="power_category">Power button</string>
-    <string name="lockscreen_enable_power_menu_title">Enable on lock screen</string>
+    <string name="lockscreen_enable_power_menu_title">Enable power menu on lock screen</string>
+    <string name="lockscreen_enable_power_menu_summary">Enable or disable the power menu on the lock screen</string>
     <string name="actions_category">Actions</string>
 
     <!-- Search Bar Switcher -->
-    <string name="recents_show_searchbar">Show Search Bar in Recents</string>
-    <string name="recents_show_searchbar_summary">Enable or disable the Google search bar in the recents menu</string>
+    <string name="recents_show_searchbar">Show search bar in recents</string>
+    <string name="recents_show_searchbar_summary">Enable or disable the google search bar in the recents menu</string>
 
     <!-- Volume rocker music seek options -->
     <string name="volbtn_music_controls_title">Volume rocker music controls</string>
@@ -421,25 +421,34 @@
     <string name="shortcuts_icon_picker_youtube">Youtube</string>
 
     <!-- Temasek lockscreen -->
-    <string name="temasek_lockscreen_title">Lockscreen</string>
-    <string name="temasek_lockscreen_category">Lockscreen settings</string>
+    <string name="temasek_lockscreen_title">Lock screen</string>
+    <string name="temasek_lockscreen_category">Lock screen settings</string>
     <string name="temasek_lockscreen_shortcuts_category">Shortcuts</string>
     <!-- CM lockscreen shortcuts -->
     <string name="cm_lockscreen_shortcuts_title">Bottom corners shortcuts</string>
-    <string name="cm_lockscreen_shortcuts_summary">View or change custom bottom corners lockscreen shortcuts</string>
+    <string name="cm_lockscreen_shortcuts_summary">View or change custom bottom corners lock screen shortcuts</string>
     <!-- Slim lockscreen shortcuts -->
     <string name="lockscreen_shortcuts_title">Middle screen shortcuts</string>
-    <string name="lockscreen_shortcuts_summary">View or change custom middle screen lockscreen shortcuts</string>
+    <string name="lockscreen_shortcuts_summary">View or change custom middle screen lock screen shortcuts</string>
     <string name="lockscreen_shorcuts_longpress_title">Shortcuts longpress</string>
-    <string name="lockscreen_shorcuts_longpress_summary">Open custom lockscreen shortcuts on longpress</string>
+    <string name="lockscreen_shorcuts_longpress_summary">Open custom lock screen shortcuts on longpress</string>
 
     <!-- Unaccounted and overcounted battery stats -->
     <string name="show_unac_and_overcounted_stats_title">Show unaccounted/overcounted stats</string>
     <string name="show_unac_and_overcounted_stats_summary">Show in battery statistics unaccounted and over-counted usage.</string>
 
+    <!-- Wakelock blocker -->
+    <string name="wakelock_blocker_title">Wakelock blocker</string>
+    <string name="wakelock_blocker_summary">Block system wakelocks</string>
+    <string name="wakelock_blocker_save">Save</string>
+    <string name="wakelock_list_header">Available wakelocks</string>
+    <string name="wakelock_blocker_reload">Reload</string>
+    <string name="wakelock_blocker_warning_title">Proceed with caution</string>
+    <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss.</string>
+
     <!-- About device screen, CPU and RAM info. -->
-    <string name="cpu_info">CPU</string>
-    <string name="mem_info">RAM</string>
+    <string name="cpu_info">Processor</string>
+    <string name="mem_info">Memory</string>
 
     <!-- Option to enable/disable scrolling cache -->
     <string name="pref_scrollingcache_title">Scrolling cache</string>
@@ -520,9 +529,9 @@
     <string name="unlock_set_unlock_mode_gesture">Gesture</string>
 
     <!-- Gesture Anywhere -->
-    <string name="gesture_anywhere_title">Gesture Anywhere</string>
-    <string name="gesture_anywhere_enabled_title">Gesture Anywhere</string>
-    <string name="gesture_anywhere_enabled_summary">Enable the Gesture Anywhere feature</string>
+    <string name="gesture_anywhere_title">Gesture anywhere</string>
+    <string name="gesture_anywhere_enabled_title">Gesture anywhere</string>
+    <string name="gesture_anywhere_enabled_summary">Enable the Gesture anywhere feature</string>
     <string name="gesture_anywhere_position_title">Location</string>
     <string name="gesture_anywhere_position_left">Left edge</string>
     <string name="gesture_anywhere_position_right">Right edge</string>
@@ -580,12 +589,12 @@
     <!-- Bluetooth accept all Filestypes -->
     <string name="bluetooth_accept_all_files">Accept all file types</string>
 
-    <!-- App Circle sidebar -->
-    <string name="category_app_circle_bar_title">App launcher</string>
-    <string name="app_circle_bar_title">App circle bar</string>
-    <string name="app_circle_bar_summary">Show circle app launcher after touching right side of screen</string>
+    <!-- App sidebar -->
+    <string name="category_app_circle_bar_title">App bar</string>
+    <string name="app_circle_bar_title">App bar</string>
+    <string name="app_circle_bar_summary">Show app bar after touching right side of screen</string>
     <string name="app_circle_bar_included_apps_title">Included apps</string>
-    <string name="app_circle_bar_included_apps_summary">Apps will show in app circle bar</string>
+    <string name="app_circle_bar_included_apps_summary">Apps will show in app bar</string>
     <string name="trigger_width_title">Trigger width</string>
     <string name="trigger_width_summary">Adjust the width of the trigger area</string>
     <string name="trigger_top_title">Trigger position</string>
@@ -593,6 +602,9 @@
     <string name="trigger_bottom_title">Trigger height</string>
     <string name="trigger_bottom_summary">Adjust the height of the trigger area</string>
 
+    <!-- AudioFX -->
+    <string name="audiofx_title">AudioFX</string>
+    
     <!-- Viper4Android -->
     <string name="viper_title">Viper4Android</string>
 
@@ -622,7 +634,7 @@
     <string name="listview_bounce_interpolator">Bounce</string>
 
     <!-- Volume Steps -->
-    <string name="volume_steps_title">Volume Steps</string>
+    <string name="volume_steps_title">Volume steps</string>
     <string name="volume_steps_60">60</string>
     <string name="volume_steps_45">45</string>
     <string name="volume_steps_30">30</string>
@@ -635,7 +647,7 @@
     <string name="volume_steps_notification_title">Notification</string>
     <string name="volume_steps_ring_title">Ringer</string>
     <string name="volume_steps_system_title">System</string>
-    <string name="volume_steps_voice_call_title">Voice Call</string>
+    <string name="volume_steps_voice_call_title">Voice call</string>
 
     <!-- AOKP custom system animations -->  
     <string name="aokp_animation_title">System animations</string>
@@ -713,35 +725,9 @@
     <string name="su_indicator">Superuser indicator</string>
     <string name="su_indicator_summary">Show superuser indicator on status bar when a session is active</string>
 
-    <!-- Lockscreen weather -->
-    <string name="status_bar_show_weather_category">Weather</string>
-    <string name="lock_screen_weather_settings_title">Lock screen weather</string>
-    <string name="lock_screen_colors_title">Lock screen colors</string>
-    <string name="lock_screen_color_settings_summary">Customize colors</string>
-    <string name="weather_show_weather_title">Show weather</string>
-    <string name="weather_show_weather_summary">Enable to show weather informations</string>
-    <string name="weather_show_location_title">Show location</string>
-    <string name="weather_show_location_summary">Enable to show the location</string>
-    <string name="weather_show_timestamp_title">Show timestamp</string>
-    <string name="weather_show_timestamp_summary">Enable to show the timestamp</string>
-    <string name="weather_condition_icon_title">Condition icon</string>
-    <string name="weather_condition_icon_dlg_title">Coose an icon for displaying the weather condition</string>
-    <string name="weather_condition_icon_monochrome_title">Monochrome</string>
-    <string name="weather_condition_icon_colored_title">Colored</string>
-    <string name="weather_condition_icon_vclouds_title">VClouds</string>
-    <string name="weather_colorize_all_icons_title">Colorize all icons</string>
-    <string name="weather_colorize_all_icons_summary">Enable to colorize all icons, disable to colorize only the monochrome icons</string>
-    <string name="icons_title">Icons</string>
-    <string name="position_right_title">Right</string>
-    <string name="position_centered_title">Centered</string>
-    <string name="hidden_title">Hidden</string>
-    <string name="dlg_reset_values_message">Reset values to\nAndroid- or temasek default?</string>
-    <string name="dlg_reset_android">Android</string>
-    <string name="dlg_reset_temasek">temasek</string>
-
-    <!-- Battery Bar -->
+    <!-- Battery bar -->
     <string name="status_bar_battery_cat_title">Battery</string>
-    <string name="battery_bar_title">Battery Bar</string>
+    <string name="battery_bar_title">Battery bar</string>
     <string name="battery_bar">Battery bar location</string>
     <string name="battery_bar_color">Battery bar color</string>
     <string name="battery_bar_cat">Battery bar style</string>
@@ -756,14 +742,13 @@
     <string name="battery_bar_regular">Regular</string>
     <string name="battery_bar_center_mirrored">Center mirrored</string>
 
-    <!-- OmniSwitch -->
-    <string name="omniswitch_settings_title">OmniSwitch</string>
-    <string name="recents_use_omniswitch_title">Use for recents</string>
-    <string name="recents_use_omniswitch_summary">Use OmniSwitch instead of default recents view</string>
-    <string name="omniswitch_start_settings_title">Settings</string>
-    <string name="omniswitch_start_settings_summary">Open OmniSwitch settings</string>
-    <string name="omniswitch_first_time_title">Information</string>
-    <string name="omniswitch_first_time_message">Make sure you have enabled OmniSwitch. You can do this by using \"Settings\" below</string>
+    <!-- Lockscreen weather -->
+    <string name="lockscreen_weather_title">Lock screen weather</string>
+    <string name="lockscreen_weather_summary">SystemUI will be restarted!</string>
+
+    <!-- Lockscreen weather -->
+    <string name="lockscreen_weather_title">Lockscreen weather</string>
+    <string name="lockscreen_weather_summary">SystemUI will be restarted!</string>
 
     <!-- Default alarm ringtone -->
     <string name="alarm_ringtone_title">Default alarm ringtone</string>
@@ -790,7 +775,7 @@
     <string name="privacy_guard_notifiation_summary">Show a notification if privacy guard is active</string>
 
     <!-- Text for forcing expanded notifications -->
-    <string name="disable_fc_notifications_title">Disable FC Notifications</string>
+    <string name="disable_fc_notifications_title">Disable FC notifications</string>
     <string name="disable_fc_notifications_summary">This will hide all force close notificaitons</string>
 
     <!-- QuickSettings collapse panel -->
@@ -803,7 +788,7 @@
     <!-- QuickSettings colors -->
     <string name="background_title">Background</string>
     <string name="icon_title">Icon</string>
-    <string name="qs_colors_title">Custom Color Options</string>
+    <string name="qs_colors_title">Custom color options</string>
     <string name="reset_android">Android</string>
     <string name="reset_swag">Swag</string>
     <string name="colors_title">Colors</string>
@@ -826,8 +811,8 @@
 
     <!-- Heads Up -->
     <string name="category_heads_up">Heads up notifications</string>
-    <string name="summary_heads_up_enabled">Pop-up notifications are enabled</string>
-    <string name="summary_heads_up_disabled">Pop-up notifications are disabled</string>
+    <string name="summary_heads_up_enabled"></string>
+    <string name="summary_heads_up_disabled"></string>
     <string name="add_heads_up_package">Add app</string>
     <string name="add_heads_up_dnd_summary">Don\'t show heads up in these applications</string>
     <string name="add_heads_up_blacklist_summary">Don\'t show heads up from these applications</string>
@@ -866,8 +851,8 @@
     <string name="heads_up_touch_outside_summary_disabled">Do not hide notification after touch outside or on home button press</string>
 
     <!-- The volume key answer -->
-    <string name="volume_answer_call_title">Volume key Answer</string>
-    <string name="volume_answer_call_summary">Volume up key Answer</string>
+    <string name="volume_answer_call_title">Volume key answer</string>
+    <string name="volume_answer_call_summary">Volume up key answer</string>
 
     <!-- Volume pane timeout -->
     <string name="category_panel_time_out">Panel timeout</string>
@@ -949,7 +934,7 @@
     <string name="double_tap_sleep_nav_bar_summary">Double tap navigation bar to put the device to sleep</string>
 
     <!-- Show carrier label and custom -->
-    <string name="carrier_options">Carrier Label</string>
+    <string name="carrier_options">Carrier label</string>
     <string name="show_status_bar_carrier_title">Status bar carrier</string>
     <string name="show_status_bar_carrier_summary">Show carrier in status bar</string>
     <string name="custom_carrier_label_title">Custom carrier label</string>
@@ -961,7 +946,7 @@
     <string name="status_bar_show_network_activity_title">Network activity arrows</string>
 
     <!-- Show bluetooth icon when disconnected -->
-    <string name="status_bar_bluetooth_icon">Show Bluetooth icon</string>
+    <string name="status_bar_bluetooth_icon">Show bluetooth icon</string>
     <string name="status_bar_bluetooth_icon_summary">Display the bluetooth icon when it is enabled but not connected</string>
 
     <!-- Status bar greeting -->
@@ -973,7 +958,7 @@
     <string name="status_bar_greeting_timeout_title">Greeting timeout</string>
     
     <!-- Smart Control -->
-    <string name="smartcontrol_settings_title">Smart Control</string>
+    <string name="smartcontrol_settings_title">Smart control</string>
     <string name="direct_control_title">Direct control</string>
     <string name="direct_call_for_dialer_title">Direct call in dailer</string>
     <string name="direct_call_for_dialer_summary">Lift phone to ear after entering number in dialer to call directly</string>
@@ -989,10 +974,10 @@
     <string name="notification_force_expand_summary">Force expanded notifications on all apps that support it</string>
 
     <!-- Slim Shortcuts -->
-    <string name="slim_shortcut_picker">Slim Actions</string>
-    <string name="qs_tile_slimaction">SlimAction</string>
-    <string name="qs_slim_action_summary">Add and set the order of SlimActions for SlimAction tile</string>
-    <string name="qs_slim_action_title">SlimActions</string>
+    <string name="slim_shortcut_picker">Slim actions</string>
+    <string name="qs_tile_slimaction">Slim action</string>
+    <string name="qs_slim_action_summary">Add and set the order of Slim actions for Slim action tile</string>
+    <string name="qs_slim_action_title">Slim actions</string>
 
     <!-- Smart cover -->
     <string name="smart_cover_title">Smart cover</string>

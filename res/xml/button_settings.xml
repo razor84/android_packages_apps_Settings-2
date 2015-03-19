@@ -270,12 +270,6 @@
             android:summary="@string/volume_answer_call_summary"
             android:defaultValue="false"/>
 
-        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
-            android:key="volume_wake_screen"
-            android:title="@string/button_wake_title"
-            android:defaultValue="false"
-            settings:advanced="true"/>
-
         <SwitchPreference
             android:key="swap_volume_buttons"
             android:title="@string/swap_volume_buttons_title"
