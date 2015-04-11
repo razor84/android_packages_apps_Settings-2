@@ -24,11 +24,8 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
-import android.os.Binder;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Parcel;
-import android.os.RemoteException;
 import android.os.SELinux;
 import android.os.SystemClock;
 import android.os.SystemProperties;
@@ -40,7 +37,6 @@ import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.SearchIndexableResource;
 import android.provider.Settings;
-import android.text.TextUtils;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.widget.Toast;
@@ -62,6 +58,7 @@ import java.util.regex.Pattern;
 public class DeviceInfoSettings extends SettingsPreferenceFragment implements Indexable {
 
     private static final String LOG_TAG = "DeviceInfoSettings";
+
     private static final String FILENAME_PROC_VERSION = "/proc/version";
     private static final String FILENAME_MSV = "/sys/board_properties/soc/msv";
     private static final String FILENAME_PROC_MEMINFO = "/proc/meminfo";
@@ -73,6 +70,7 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_LICENSE = "license";
     private static final String KEY_COPYRIGHT = "copyright";
     private static final String KEY_WEBVIEW_LICENSE = "webview_license";
+    private static final String KEY_SYSTEM_UPDATE_SETTINGS = "system_update_settings";
     private static final String PROPERTY_URL_SAFETYLEGAL = "ro.url.safetylegal";
     private static final String PROPERTY_SELINUX_STATUS = "ro.build.selinux";
     private static final String KEY_KERNEL_VERSION = "kernel_version";
@@ -81,9 +79,9 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
     private static final String KEY_SELINUX_STATUS = "selinux_status";
     private static final String KEY_BASEBAND_VERSION = "baseband_version";
     private static final String KEY_FIRMWARE_VERSION = "firmware_version";
+    private static final String KEY_UPDATE_SETTING = "additional_system_update_settings";
     private static final String KEY_EQUIPMENT_ID = "fcc_equipment_id";
     private static final String PROPERTY_EQUIPMENT_ID = "ro.ril.fccid";
-    private static final String KEY_DEVICE_FEEDBACK = "device_feedback";
     private static final String KEY_SAFETY_LEGAL = "safetylegal";
     private static final String KEY_DEVICE_CPU = "device_cpu";
     private static final String KEY_DEVICE_MEMORY = "device_memory";
@@ -161,11 +159,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
             getPreferenceScreen().removePreference(findPreference(KEY_BASEBAND_VERSION));
         }
 
-        // Dont show feedback option if there is no reporter.
-        if (TextUtils.isEmpty(getFeedbackReporterPackage(getActivity()))) {
-            getPreferenceScreen().removePreference(findPreference(KEY_DEVICE_FEEDBACK));
-        }
-
         /*
          * Settings is a generic app and should not contain any device-specific
          * info.
@@ -181,6 +174,24 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
         Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference, KEY_WEBVIEW_LICENSE,
                 Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+
+        // These are contained by the root preference screen
+        parentPreference = getPreferenceScreen();
+        if (UserHandle.myUserId() == UserHandle.USER_OWNER) {
+            Utils.updatePreferenceToSpecificActivityOrRemove(act, parentPreference,
+                    KEY_SYSTEM_UPDATE_SETTINGS,
+                    Utils.UPDATE_PREFERENCE_FLAG_SET_TITLE_TO_MATCHING_ACTIVITY);
+            /* Make sure the activity is provided by who we want... */
+            if (findPreference(KEY_SYSTEM_UPDATE_SETTINGS) != null)
+                removePreferenceIfPackageNotInstalled(findPreference(KEY_SYSTEM_UPDATE_SETTINGS));
+        } else {
+            // Remove for secondary users
+            removePreference(KEY_SYSTEM_UPDATE_SETTINGS);
+        }
+
+        // Read platform settings for additional system update setting
+        removePreferenceIfBoolFalse(KEY_UPDATE_SETTING,
+                getResources().getBoolean(R.bool.config_additional_system_update_setting_enable));
 
         // Remove regulatory information if none present.
         final Intent intent = new Intent(Settings.ACTION_SHOW_REGULATORY_INFO);
@@ -264,8 +275,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                         Toast.LENGTH_LONG);
                 mDevHitToast.show();
             }
-        } else if (preference.getKey().equals(KEY_DEVICE_FEEDBACK)) {
-            sendFeedback();
         } else if (preference.getKey().equals(KEY_MOD_VERSION)) {
             System.arraycopy(mHits, 1, mHits, 0, mHits.length-1);
             mHits[mHits.length-1] = SystemClock.uptimeMillis();
@@ -323,16 +332,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         } catch (RuntimeException e) {
             // No recovery
         }
-    }
-
-    private void sendFeedback() {
-        String reporterPackage = getFeedbackReporterPackage(getActivity());
-        if (TextUtils.isEmpty(reporterPackage)) {
-            return;
-        }
-        Intent intent = new Intent(Intent.ACTION_BUG_REPORT);
-        intent.setPackage(reporterPackage);
-        startActivityForResult(intent, 0);
     }
 
     /**
@@ -412,41 +411,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         return "";
     }
 
-    private static String getFeedbackReporterPackage(Context context) {
-        final String feedbackReporter =
-                context.getResources().getString(R.string.oem_preferred_feedback_reporter);
-        if (TextUtils.isEmpty(feedbackReporter)) {
-            // Reporter not configured. Return.
-            return feedbackReporter;
-        }
-        // Additional checks to ensure the reporter is on system image, and reporter is
-        // configured to listen to the intent. Otherwise, dont show the "send feedback" option.
-        final Intent intent = new Intent(Intent.ACTION_BUG_REPORT);
-
-        PackageManager pm = context.getPackageManager();
-        List<ResolveInfo> resolvedPackages =
-                pm.queryIntentActivities(intent, PackageManager.GET_RESOLVED_FILTER);
-        for (ResolveInfo info : resolvedPackages) {
-            if (info.activityInfo != null) {
-                if (!TextUtils.isEmpty(info.activityInfo.packageName)) {
-                    try {
-                        ApplicationInfo ai = pm.getApplicationInfo(info.activityInfo.packageName, 0);
-                        if ((ai.flags & ApplicationInfo.FLAG_SYSTEM) != 0) {
-                            // Package is on the system image
-                            if (TextUtils.equals(
-                                        info.activityInfo.packageName, feedbackReporter)) {
-                                return feedbackReporter;
-                            }
-                        }
-                    } catch (PackageManager.NameNotFoundException e) {
-                         // No need to do anything here.
-                    }
-                }
-            }
-        }
-        return null;
-    }
-
     /**
      * For Search.
      */
@@ -477,10 +441,6 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 if (Utils.isWifiOnly(context) && !Utils.showSimCardTile(context)) {
                     keys.add((KEY_BASEBAND_VERSION));
                 }
-                // Dont show feedback option if there is no reporter.
-                if (TextUtils.isEmpty(getFeedbackReporterPackage(context))) {
-                    keys.add(KEY_DEVICE_FEEDBACK);
-                }
                 if (!checkIntentAction(context, "android.settings.TERMS")) {
                     keys.add(KEY_TERMS);
                 }
@@ -492,6 +452,13 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
                 }
                 if (!checkIntentAction(context, "android.settings.WEBVIEW_LICENSE")) {
                     keys.add(KEY_WEBVIEW_LICENSE);
+                }
+                if (UserHandle.myUserId() != UserHandle.USER_OWNER) {
+                    keys.add(KEY_SYSTEM_UPDATE_SETTINGS);
+                }
+                if (!context.getResources().getBoolean(
+                        R.bool.config_additional_system_update_setting_enable)) {
+                    keys.add(KEY_UPDATE_SETTING);
                 }
                 return keys;
             }
@@ -611,4 +578,3 @@ public class DeviceInfoSettings extends SettingsPreferenceFragment implements In
         return result;
     }
 }
-

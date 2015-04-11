@@ -1395,7 +1395,7 @@
     <string name="nfc_quick_toggle_summary" product="default">Allow data exchange when the phone touches another device</string>
 
     <!-- Used to enter the Android Beam sharing preferences screen. This phrase is a trademark. [CHAR LIMIT=32] -->
-    <string name="android_beam_settings_title">Android Beam</string>
+    <string name="android_beam_settings_title">Android beam</string>
     <!-- Used to describe the on state of the Android Beam feature [CHAR LIMIT=NONE] -->
     <string name="android_beam_on_summary">Ready to transmit app content via NFC</string>
     <!-- Used to describe the off state of the Android Beam feature [CHAR LIMIT=NONE] -->
@@ -1403,7 +1403,7 @@
     <!-- Used to describe the enabled state of the Android Beam feature when NFC, which it relies on, is turned off [CHAR LIMIT=NONE] -->
     <string name="android_beam_disabled_summary">Unavailable because NFC is turned off</string>
     <!-- Used in the Android Beam sharing preferences screen. This phrase is a trademark. [CHAR LIMIT=32] -->
-    <string name="android_beam_label">Android Beam</string>
+    <string name="android_beam_label">Android beam</string>
     <!-- Explanation of the Android Beam feature in the Android Beam settings panel. The use of "beam" here is as a verb and not considered trademarked. [CHAR LIMIT=NONE] -->
     <string name="android_beam_explained">When this feature is turned on, you can beam app content to another NFC-capable device by holding the devices close together. For example, you can beam Browser pages, YouTube videos, People contacts, and more.\n\nJust bring the devices together (typically back to back) and then touch your screen. The app determines what gets beamed.</string>
 
@@ -1487,13 +1487,13 @@
     <!-- Header for the list of wifi networks-->
     <string name="wifi_access_points">Wi\u2011Fi networks</string>
     <!-- Menu option to do WPS Push Button [CHAR LIMIT=25]-->
-    <string name="wifi_menu_wps_pbc">WPS Push Button</string>
+    <string name="wifi_menu_wps_pbc">WPS push button</string>
     <!-- Content description for menu button in Wifi setup. Not shown on the screen. [CHAR LIMIT=NONE] -->
     <string name="wifi_menu_more_options">More options</string>
     <!-- Menu option to do WPS Pin Entry [CHAR LIMIT=25]-->
-    <string name="wifi_menu_wps_pin">WPS Pin Entry</string>
+    <string name="wifi_menu_wps_pin">WPS pin entry</string>
     <!-- Menu option to launch Wi-Fi Direct settings [CHAR LIMIT=20]-->
-    <string name="wifi_menu_p2p">Wi\u2011Fi Direct</string>
+    <string name="wifi_menu_p2p">Wi\u2011Fi direct</string>
     <!-- Menu option to scan Wi-Fi networks -->
     <string name="wifi_menu_scan">Scan</string>
     <!-- Menu option to Wi-Fi advanced settings -->
@@ -1889,7 +1889,7 @@
     <!-- Sound and alerts settings -->
     <skip/>
     <!-- Main Settings screen setting option name to go into the display settings screen -->
-    <string name="home_settings">Home</string>
+    <string name="home_settings">Launcher</string>
     <string name="display_settings_title">Display</string>
     <!-- Sound settings screen heading -->
     <string name="sound_settings">Sound</string>
@@ -3409,7 +3409,7 @@
     <!-- setting Checkbox summary whether to keep the screen on when plugged in  -->
     <string name="keep_screen_on_summary">Screen will never sleep while charging</string>
     <!-- Setting Checkbox title whether to enable bluetooth HCI snoop log -->
-    <string name="bt_hci_snoop_log">Enable Bluetooth HCI snoop log</string>
+    <string name="bt_hci_snoop_log">Enable bluetooth HCI snoop log</string>
     <!-- setting Checkbox summary whether to capture all bluetooth HCI packets in a file -->
     <string name="bt_hci_snoop_log_summary">Capture all bluetooth HCI packets in a file</string>
     <!-- setting Checkbox title whether to enable OEM unlock [CHAR_LIMIT=35] -->
@@ -4063,7 +4063,7 @@
     <skip />
 
     <!-- [CHAR LIMIT=NONE] Activity title for Process Stats summary -->
-    <string name="process_stats_summary_title">Process Stats</string>
+    <string name="process_stats_summary_title">Process stats</string>
     <!-- [CHAR LIMIT=NONE] Activity title summary for Process Stats summary -->
     <string name="process_stats_summary">Geeky stats about running processes</string>
     <!-- [CHAR LIMIT=NONE] Label for amount of memory use -->
@@ -5952,12 +5952,6 @@
          settings button -->
     <string name="notification_app_settings_button">Notification settings</string>
 
-
-   <!-- [CHAR LIMIT=35] Feedback on the device -->
-   <string name="device_feedback">Send feedback about this device</string>
-
-    <!-- Full package name of OEM preferred device feedback reporter [DO NOT TRANSLATE] -->
-    <string name="oem_preferred_feedback_reporter" translatable="false"></string>
 
     <!-- PIN entry dialog title for entering the administrator PIN [CHAR LIMIT=none] -->
     <string name="restr_pin_enter_admin_pin">Enter administrator PIN</string>
