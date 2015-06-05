@@ -956,7 +956,7 @@
     <string name="unlock_set_unlock_none_summary">No security</string>
 
     <!-- Title for preference that guides the user through a weak biometric lock [CHAR LIMIT=22] -->
-    <string name="unlock_set_unlock_biometric_weak_title">Face Unlock</string>
+    <string name="unlock_set_unlock_biometric_weak_title">Face unlock</string>
     <!-- Summary for preference that disables unlock security [CHAR LIMIT=45]-->
     <string name="unlock_set_unlock_biometric_weak_summary">Low security, experimental</string>
 
@@ -986,7 +986,7 @@
     <!-- Summary for "Configure lockscreen" when security is disabled [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_mode_none">Swipe</string>
     <!-- Summary for "Configure lockscreen" when security biometric weak is enabled [CHAR LIMIT=45] -->
-    <string name="unlock_set_unlock_mode_biometric_weak">Face Unlock</string>
+    <string name="unlock_set_unlock_mode_biometric_weak">Face unlock</string>
     <!-- Summary for "Configure lockscreen" when security pattern is enabled [CHAR LIMIT=45] -->
     <string name="unlock_set_unlock_mode_pattern">Pattern</string>
     <!-- Summary for "Configure lockscreen" when security PIN is enabled [CHAR LIMIT=45] -->
@@ -1405,7 +1405,7 @@
     <string name="nfc_quick_toggle_summary" product="default">Allow data exchange when the phone touches another device</string>
 
     <!-- Used to enter the Android Beam sharing preferences screen. This phrase is a trademark. [CHAR LIMIT=32] -->
-    <string name="android_beam_settings_title">Android Beam</string>
+    <string name="android_beam_settings_title">Android beam</string>
     <!-- Used to describe the on state of the Android Beam feature [CHAR LIMIT=NONE] -->
     <string name="android_beam_on_summary">Ready to transmit app content via NFC</string>
     <!-- Used to describe the off state of the Android Beam feature [CHAR LIMIT=NONE] -->
@@ -1413,7 +1413,7 @@
     <!-- Used to describe the enabled state of the Android Beam feature when NFC, which it relies on, is turned off [CHAR LIMIT=NONE] -->
     <string name="android_beam_disabled_summary">Unavailable because NFC is turned off</string>
     <!-- Used in the Android Beam sharing preferences screen. This phrase is a trademark. [CHAR LIMIT=32] -->
-    <string name="android_beam_label">Android Beam</string>
+    <string name="android_beam_label">Android beam</string>
     <!-- Explanation of the Android Beam feature in the Android Beam settings panel. The use of "beam" here is as a verb and not considered trademarked. [CHAR LIMIT=NONE] -->
     <string name="android_beam_explained">When this feature is turned on, you can beam app content to another NFC-capable device by holding the devices close together. For example, you can beam Browser pages, YouTube videos, People contacts, and more.\n\nJust bring the devices together (typically back to back) and then touch your screen. The app determines what gets beamed.</string>
 
@@ -1497,13 +1497,13 @@
     <!-- Header for the list of wifi networks-->
     <string name="wifi_access_points">Wi\u2011Fi networks</string>
     <!-- Menu option to do WPS Push Button [CHAR LIMIT=25]-->
-    <string name="wifi_menu_wps_pbc">WPS Push Button</string>
+    <string name="wifi_menu_wps_pbc">WPS push button</string>
     <!-- Content description for menu button in Wifi setup. Not shown on the screen. [CHAR LIMIT=NONE] -->
     <string name="wifi_menu_more_options">More options</string>
     <!-- Menu option to do WPS Pin Entry [CHAR LIMIT=25]-->
-    <string name="wifi_menu_wps_pin">WPS Pin Entry</string>
+    <string name="wifi_menu_wps_pin">WPS pin entry</string>
     <!-- Menu option to launch Wi-Fi Direct settings [CHAR LIMIT=20]-->
-    <string name="wifi_menu_p2p">Wi\u2011Fi Direct</string>
+    <string name="wifi_menu_p2p">Wi\u2011Fi direct</string>
     <!-- Menu option to scan Wi-Fi networks -->
     <string name="wifi_menu_scan">Scan</string>
     <!-- Menu option to Wi-Fi advanced settings -->
@@ -1899,7 +1899,7 @@
     <!-- Sound and alerts settings -->
     <skip/>
     <!-- Main Settings screen setting option name to go into the display settings screen -->
-    <string name="home_settings">Home</string>
+    <string name="home_settings">Launcher</string>
     <string name="display_settings_title">Display</string>
     <!-- Sound settings screen heading -->
     <string name="sound_settings">Sound</string>
@@ -3419,7 +3419,7 @@
     <!-- setting Checkbox summary whether to keep the screen on when plugged in  -->
     <string name="keep_screen_on_summary">Screen will never sleep while charging</string>
     <!-- Setting Checkbox title whether to enable bluetooth HCI snoop log -->
-    <string name="bt_hci_snoop_log">Enable Bluetooth HCI snoop log</string>
+    <string name="bt_hci_snoop_log">Enable bluetooth HCI snoop log</string>
     <!-- setting Checkbox summary whether to capture all bluetooth HCI packets in a file -->
     <string name="bt_hci_snoop_log_summary">Capture all bluetooth HCI packets in a file</string>
     <!-- setting Checkbox title whether to enable OEM unlock [CHAR_LIMIT=35] -->
@@ -3443,7 +3443,7 @@
     <!-- Setting Checkbox title whether to enable WiFi Aggressive Handover. [CHAR LIMIT=40] -->
     <string name="wifi_aggressive_handover">Aggressive Wi\u2011Fi to mobile handover</string>
     <!-- Setting Checkbox title whether to enable WiFi Scanning in the presence of traffic. [CHAR LIMIT=80] -->
-    <string name="wifi_allow_scan_with_traffic">Always allow Wi\u2011Fi Roam Scans</string>
+    <string name="wifi_allow_scan_with_traffic">Always allow Wi\u2011Fi roam scans</string>
     <!-- setting Checkbox summary whether to show options for wireless display certification  -->
     <string name="wifi_display_certification_summary">Show options for wireless display certification</string>
     <!-- Setting Checkbox summary whether to enable Wifi verbose Logging [CHAR LIMIT=80] -->
@@ -4073,7 +4073,7 @@
     <skip />
 
     <!-- [CHAR LIMIT=NONE] Activity title for Process Stats summary -->
-    <string name="process_stats_summary_title">Process Stats</string>
+    <string name="process_stats_summary_title">Process stats</string>
     <!-- [CHAR LIMIT=NONE] Activity title summary for Process Stats summary -->
     <string name="process_stats_summary">Geeky stats about running processes</string>
     <!-- [CHAR LIMIT=NONE] Label for amount of memory use -->
@@ -4824,9 +4824,9 @@
     <string name="enable_opengl_traces_title">Enable OpenGL traces</string>
 
     <!-- UI debug setting: force use of AwesomePlayer [CHAR LIMIT=25] -->
-    <string name="use_awesomeplayer">Use AwesomePlayer (deprecated)</string>
+    <string name="use_awesomeplayer">Use awesomeplayer (deprecated)</string>
     <!-- UI debug setting: force use of AwesomePlayer summary [CHAR LIMIT=50] -->
-    <string name="use_awesomeplayer_summary">Use AwesomePlayer instead of NuPlayer for most media playback</string>
+    <string name="use_awesomeplayer_summary">Use awesomeplayer instead of nuplayer for most media playback</string>
 
     <!-- UI debug setting: disable USB audio routing title [CHAR LIMIT=32] -->
     <string name="usb_audio_disable_routing">Disable USB audio routing</string>
@@ -5467,13 +5467,13 @@
     <!-- Access point names title.  [CHAR LIMIT=50] -->
     <string name="access_point_names">Access point names</string>
     <!-- Enhaced 4G LTE Mode title.  [CHAR LIMIT=50] -->
-    <string name="enhanced_4g_lte_mode_title">Enhanced 4G LTE Mode</string>
+    <string name="enhanced_4g_lte_mode_title">Enhanced LTE/4G Mode</string>
     <!-- Enhaced 4G LTE Mode summary.  [CHAR LIMIT=100] -->
-    <string name="enhanced_4g_lte_mode_summary">Use LTE data to enhance voice and communications (Recommended)</string>
+    <string name="enhanced_4g_lte_mode_summary">Use LTE/4G data to enhance voice and communications (Recommended)</string>
     <!-- Preferred network type title.  [CHAR LIMIT=50] -->
     <string name="preferred_network_type_title">Preferred network type</string>
     <!-- Preferred network type summary.  [CHAR LIMIT=100] -->
-    <string name="preferred_network_type_summary">LTE (recommended)</string>
+    <string name="preferred_network_type_summary">LTE/4G (recommended)</string>
     <!-- Work SIM title.  [CHAR LIMIT=50] -->
     <string name="work_sim_title">Work SIM</string>
 
@@ -5962,12 +5962,6 @@
          settings button -->
     <string name="notification_app_settings_button">Notification settings</string>
 
-
-   <!-- [CHAR LIMIT=35] Feedback on the device -->
-   <string name="device_feedback">Send feedback about this device</string>
-
-    <!-- Full package name of OEM preferred device feedback reporter [DO NOT TRANSLATE] -->
-    <string name="oem_preferred_feedback_reporter" translatable="false"></string>
 
     <!-- PIN entry dialog title for entering the administrator PIN [CHAR LIMIT=none] -->
     <string name="restr_pin_enter_admin_pin">Enter administrator PIN</string>

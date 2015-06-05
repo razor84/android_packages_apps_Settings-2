@@ -90,7 +90,7 @@
             android:persistent="false"
             android:dependency="enable_nav_bar"
             settings:advanced="true"/>
-
+            
     </PreferenceCategory>
 
     <PreferenceScreen

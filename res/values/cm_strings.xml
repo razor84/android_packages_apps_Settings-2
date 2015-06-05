@@ -87,9 +87,9 @@
     <!-- Profile network mode -->
     <string name="profile_networkmode_2g">2G</string>
     <string name="profile_networkmode_3g">3G</string>
-    <string name="profile_networkmode_4g">LTE</string>
+    <string name="profile_networkmode_4g">LTE/4G</string>
     <string name="profile_networkmode_2g3g">2G/3G</string>
-    <string name="profile_networkmode_2g3g4g">2G/3G/LTE</string>
+    <string name="profile_networkmode_2g3g4g">2G/3G/LTE/4G</string>
 
     <!-- Profile Config screen PreferenceGroup titles -->
     <string name="profile_volumeoverrides_title">Volume overrides</string>
@@ -282,18 +282,9 @@
     <string name="block_notifications_title">Filter notifications</string>
     <string name="block_notifications_summary">Manage ignored notifications and filters</string>
     <string name="no_filters_title">No filters set</string>
-
-    <!-- CM Updater -->
-    <string name="cmupdate_settings_title">CyanogenMod updates</string>
-
-    <!-- Settings switch for updating Cyanogen recovery -->
-    <string name="update_recovery_title">Update Cyanogen recovery</string>
-    <string name="update_recovery_summary">Update recovery with system updates</string>
-    <string name="update_recovery_on_warning">NOTICE: When this feature is enabled, your installed recovery will be replaced by one included with the current version of the running OS.\n\nYour recovery will be updated along with upgrades to your system, helping to ensure compatibility with future versions.\n\nWould you like to enable this feature?</string>
-    <string name="update_recovery_off_warning">WARNING: When this feature is disabled, your installed recovery will not be updated with OS upgrades.\n\nFuture OS updates may not install with outdated or custom recovery versions.\n\nDo you really want to disable this feature?</string>
-
-    <!-- About phone screen, CyanogenMod version -->
-    <string name="mod_version">CyanogenMod version</string>
+ 
+    <!-- About phone screen, Team (UB) version -->
+    <string name="mod_version">Team (UB) version</string>
     <string name="mod_version_default">Unknown</string>
 
     <!-- About phone screen, model name -->
@@ -302,8 +293,6 @@
     <!-- About phone screen, build date -->
     <string name="build_date">Build date</string>
     <string name="build_date_default" translatable="false">2014-01-01-0000</string>
-
-    <string name="contributor_cloud_title">Contributors</string>
 
     <!-- About phone screen, service state -->
     <string name="phone_service_state">Voice: <xliff:g id="voice_state">%1$s</xliff:g>, data: <xliff:g id="data_state">%2$s</xliff:g></string>
@@ -322,7 +311,7 @@
     <!-- Privacy Guard -->
     <string name="privacy_guard_default_title">Enabled by default</string>
     <string name="privacy_guard_default_summary">Enable by default for newly-installed apps</string>
-    <string name="privacy_guard_manager_title">Privacy Guard</string>
+    <string name="privacy_guard_manager_title">Privacy guard</string>
     <string name="privacy_guard_manager_summary">Manage which apps have access to your personal data</string>
     <string name="privacy_guard_no_user_apps">No apps are installed</string>
     <string name="privacy_guard_help_title">Help</string>
@@ -490,7 +479,7 @@
     <string name="app_notification_no_ongoing_on_keyguard_summary">Never show persistent notifications from this app on the lock screen</string>
 
     <!-- High touch sensitivity -->
-    <string name="high_touch_sensitivity_title">High touch sensitivity</string>
+    <string name="high_touch_sensitivity_title">High touch sensitivity (glove mode)</string>
     <string name="high_touch_sensitivity_summary">Increase touchscreen sensitivity so it can be used while wearing gloves</string>
 
     <!-- Touchscreen hovering -->
@@ -887,7 +876,7 @@
     <string name="sim_enabler_disabling">Deactivating <xliff:g id="name">%s</xliff:g>\u2026</string>
     <string name="sim_enabler_deactivate">Deactivate</string>
 
-    <string name="primary_sub_select_title">Default 3G/LTE subscription</string>
+    <string name="primary_sub_select_title">Default 3G/LTE/4G subscription</string>
 
     <string name="usb_charging_title">Charge only</string>
     <string name="usb_charging_summary">Disables all data transfers with computer and charges device over USB port</string>
@@ -1044,10 +1033,10 @@
     <string name="qs_tile_nfc">NFC</string>
     <string name="qs_tile_compass">Compass</string>
     <string name="qs_tile_lockscreen">Lock screen</string>
-    <string name="qs_tile_lte">LTE</string>
+    <string name="qs_tile_lte">LTE/4G</string>
     <string name="qs_tile_visualizer" translatable="false">AudioFX</string>
     <string name="qs_tile_screen_timeout">Screen timeout</string>
-    <string name="qs_tile_trds">TRDS</string>
+    <string name="qs_tile_trds">DarkUI</string>
 
     <string name="qs_main_tiles_title">Enlarge first row</string>
     <string name="qs_main_tiles_summary_on">Two main tiles on the first row</string>
@@ -1108,7 +1097,7 @@
     <string name="lockscreen_visualizer_title">Display music visualizer</string>
 
     <!-- WhisperPush -->
-    <string name="whisperpush_title">WhisperPush</string>
+    <string name="whisperpush_title">Whisperpush</string>
     <string name="whisperpush_summary">Manage secure SMS settings</string>
 
     <string name="navigation_ring_title">Navigation ring targets</string>
@@ -1166,6 +1155,7 @@
     <string name="notification_manager">Notifications</string>
     <string name="lockscreen_settings">Lock screen</string>
     <string name="category_lights">Lights</string>
+    <string name="category_smartcover">Smart covers</string>
     <string name="power_usage_history_title">Battery usage</string>
 
     <!-- Show/Hide Search Bar -->
@@ -1179,7 +1169,7 @@
     <string name="allow_lights_title">Allow notification lights</string>
 
     <!-- LiveDisplay -->
-    <string name="live_display_title" translatable="false">LiveDisplay</string>
+    <string name="live_display_title" translatable="false">Live display</string>
     <string name="live_display_summary">Optimize your screen based on time of day and ambient conditions to improve readability and reduce eyestrain</string>
     <string name="live_display_mode">Display mode</string>
     <string name="live_display_color_temperature_title">Color temperature</string>

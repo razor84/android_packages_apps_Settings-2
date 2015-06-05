@@ -19,17 +19,17 @@
     android:title="@string/temasek_settings_title"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
-    <!-- App circle bar -->
-    <PreferenceScreen
-         android:key="app_circle_bar"
-         android:fragment="com.android.settings.temasek.AppCircleBar"
-         android:title="@string/app_circle_bar_title"/>
-
-    <!-- App sidebar -->
+    <!-- Appbar -->
     <PreferenceScreen
          android:key="app_sidebar"
          android:fragment="com.android.settings.temasek.AppSidebar"
          android:title="@string/app_sidebar_title"/>
+    
+    <!-- Circle appbar -->
+    <PreferenceScreen
+         android:key="app_circle_bar"
+         android:fragment="com.android.settings.temasek.AppCircleBar"
+         android:title="@string/category_app_circle_bar_title"/>
 
     <!-- Clock widget -->
     <PreferenceScreen
