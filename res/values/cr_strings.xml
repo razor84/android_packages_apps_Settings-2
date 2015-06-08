@@ -4,7 +4,7 @@
 
     <!-- Android Adam version -->  
     <string name="aosp_adamTitle">Android base</string>
-    <string name="aosp_adam">Lollipop 5.1.1 Rev 3 LMY48B</string>
+    <string name="aosp_adam">Lollipop 5.1.1 Rev 4 LMY47Z</string>
 
     <!-- Advanced settings -->
     <string name="temasek_settings_title">Advanced settings</string>
